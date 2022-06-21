@@ -5,7 +5,7 @@ int len_chaine(char* chaine) {
     int l = 0;
     while (*adresse != '\0'){
         l++;
-        adresse = adresse + 1;
+        adresse++;
     }
     return l;
 }
@@ -17,10 +17,7 @@ int main () {
     printf("Entrez une chaine :");
     scanf("%[^\n]", chaine);
 
-    char* adresse = &chaine;
-    printf("%p\n", adresse);
-
-    int a = len_chaine(adresse);
+    int a = len_chaine(chaine);
     printf("La longueur de la chaine est : %d\n", a);
     return a;
 
